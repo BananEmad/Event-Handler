@@ -1,0 +1,38 @@
+
+
+
+  <html>
+<head>
+    <title>Main page </title>
+ 
+   
+</head>
+<body>
+  
+  <div class="container">
+      <br/>
+
+
+
+
+      <nav class="navbar navbar-expand-lg fill" style="background-color: rgb(236, 194, 155);">
+        <div class="navbar-brand bg-info p-2" href="#"> welcom <%=locals.name%></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link " href="/speaker/listevents">Events List</a>
+            <a class="nav-item nav-link " href="/speaker/editinfo">Edit Profile</a>
+            <a class="nav-item nav-link" href="/speaker/logout">logout</a>
+            
+          </div>
+        </div>
+      </nav>
+
+</div>
+<%- include("../partial/bootstrap.ejs") -%>
+</body>
+
+</html>

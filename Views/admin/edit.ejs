@@ -1,0 +1,69 @@
+<html>
+<head>
+  <%- include("../partial/bootstrap.ejs") -%>
+  <title>Edit Speaker </title>
+</head>
+<body>
+ 
+  <div class="container">
+      <br/>
+    <%- include("../partial/nav.ejs") -%>
+    <br/>
+
+    <div class="container card ">
+            
+        <form method="POST" action="/admin/edit/<%=speaker[0]._id %>">
+          <br/> 
+          <div class="form-group row">
+          
+            <label class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" disabled name="_id" value="<%=speaker[0]._id %>"  >
+            </div>
+          </div>
+          <div class="form-group row">
+              
+            <label class="col-sm-2 col-form-label">Full Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="FullName" value="<%=speaker[0].FullName %>">
+            </div>
+          </div>
+          <div class="form-group row">
+              
+              <label class="col-sm-2 col-form-label">User Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="UserName" value="<%=speaker[0].UserName %>" readonly>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">City</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="Address.city" value="<%=speaker[0].Address.city %>">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Street</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="Address.street" value="<%=speaker[0].Address.street %>">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Building</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="Address.building" value="<%=speaker[0].Address.building %>">
+              </div>
+            </div>
+            <div class="form-group row text-center">
+              <div class="col-sm-10">
+                <button type="submit" class=" btn btn-primary ">Save</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+   
+</div>
+</body>
+
+</html>
